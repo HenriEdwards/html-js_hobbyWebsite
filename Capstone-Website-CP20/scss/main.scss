@@ -1,0 +1,135 @@
+// headers
+$h1-font-size: 10rem;
+$h1-font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+$h2-font-family: Gill Sans, sans-serif;
+// background colors
+$standard-bg: #03648f;
+$standard-bg-dark: #0075a7;
+// text elements
+$text-shadow-color: rgba(0, 0, 0, 0.7);
+
+// letters/fonts
+$letter-spacing: 0.05em;
+
+// font colors
+$color: #0075a7;
+
+// background styles
+.bg-color {
+    background-color: $standard-bg;
+}
+.bg-dark-2 {
+    background-color: $standard-bg-dark;
+}
+.bg-color-contact {
+    min-height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+body, html {
+  overflow-x: hidden;
+}
+
+// heading
+h1 {
+    font-family: $h1-font-family;
+}
+
+h5 {
+  font-weight: 800;
+  font-family: $h2-font-family;
+}
+
+.text-spacing {
+  letter-spacing: $letter-spacing;
+  text-align: center;
+}
+
+// links
+a{
+    color: white;
+}
+a:hover{
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+// saved files page custom layout
+.custom{
+  margin-top: 50px;
+}
+
+// small screens h1
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+}
+
+// mid screens h1
+@media (min-width: 576px) and (max-width: 992px) {
+  h1 {
+    font-size: 7rem !important;
+  }
+}
+
+// larger screens h1
+@media (min-width: 992px) {
+  h1 {
+    font-size: 10rem !important;
+  }
+}
+
+// footer smaller screens
+@media (max-width: 576px) {
+  .footer {
+    font-size: .80rem !important;
+  }
+}
+
+.primary-font{
+  font-family: $h1-font-family;
+}
+
+// h1 shadow
+.text-shadow {
+ text-shadow: 6px 6px 4px $text-shadow-color;
+ }
+
+// size of sessionStorage images
+ #savedImages img {
+  max-width: 45%;
+  max-height: 200px;
+  height: auto;
+  padding: 5px;
+}
+
+// style the dropdown button
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+// style the dropdown menu
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+// style the dropdown options
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+// style the dropdown options on hover
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+//show the dropdown menu when the button is clicked
+.dropdown:hover .dropdown-content {
+  display: block;
+}

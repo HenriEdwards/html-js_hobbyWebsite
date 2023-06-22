@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swimming</title>
+  <!-- bootstrap js cdn -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous">
+  <!-- custom css -->
+  <link rel='stylesheet' href='scss/main.css'>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-dark-2 navbar-dark">
+  <button class="navbar-toggler"
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarNavDropdown"
+  aria-controls="navbarNavDropdown"
+  aria-expanded="false"
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+    <li class="nav-item active mr-4">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item mr-4">
+      <a class="nav-link" href="learn.html">Learn More</a>
+    </li>
+    <li class="nav-item mr-4">
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </li>
+    <li class="nav-item mr-4">
+      <a class="nav-link" href="save.html">Saved for later</a>
+    </li>
+    </ul>
+  </div>
+  </nav>
+  <!-- top image & text-->
+  <div class="container-fluid position-relative p-0" style="height: 100vh;">
+    <img src="images/swimming-bg.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+    <h1 class="position-absolute top-50 start-50 translate-middle fw-bold text-white text-shadow text-spacing"
+    style="top: calc(50% - 56px); left: 50%; transform: translate(-50%, -50%); text-align: center;">SWIMMING</h1>
+  </div>
+  <!-- img & text-->
+  <div class='container-fluid bg-color'>
+    <div class='row'>
+      <!-- image left-->
+      <div class='col-md-6 align-items-center justify-content-center d-flex'>
+        <div class="image-container"
+        style="width: 100%; max-width: 700px; display: flex; flex-direction: column; align-items: center;">
+        <img src='images/swimming-2.jpg'
+        id='i1' class='img-fluid m-3 h-100 w-100'
+        style="max-width: 100%; max-height: 100%;">
+        <button class="btn bg-dark-2 text-white"
+        onclick="saveImage(document.getElementById('i1').src, 'i1')">save to file</button>
+        </div>
+      </div>
+      <!-- text right-->
+      <div class='col-md-6 text-white align-items-center d-flex p-4'>
+        <div class='d-flex flex-column align-items-center justify-content-center'>
+          <h2 class='fw-bold m-3 text-spacing primary-font'>Benefits of Swimming</h2>
+          <p class='m-3' id='p1'>As a swimmer, I can attest to the numerous benefits that swimming provides.
+            Not only is it a great form of low-impact cardiovascular exercise, but it
+            also helps to build strength and endurance throughout the entire body.
+            Swimming engages all major muscle groups, including the arms, legs, back,
+            and core, and can help to improve overall muscle tone and flexibility.
+            Additionally, swimming is a great way to relieve stress and promote relaxation,
+            thanks to the buoyancy and fluidity of the water.
+          </p>
+          <form>
+            <button class="btn bg-dark-2 text-white"
+            type="button"
+            onClick="increment(document.querySelector('#c1'))">
+            Likes <span id="c1">0</span></button>
+          </form>
+          <button class = "btn bg-dark-2 text-white mt-3"
+          onclick="saveFile(document.getElementById('p1').textContent, 'p1')"
+          >save text for later</button>
+          <p class='m-3' id='p2'>Finally, swimming is a fun and social activity that can be enjoyed
+            alone or with others, making it a great way to stay active and connected with
+            friends and family. Whether you're an experienced swimmer or just starting out,
+            swimming is a fantastic way to improve your health and well-being while enjoying
+            the many benefits of being in the water.
+          </p>
+          <form>
+            <button class="btn bg-dark-2 text-white"
+            type="button"
+            onClick="increment(document.querySelector('#c2'))"
+            >Likes <span id="c2">0</span></button>
+          </form>
+          <button class = "btn bg-dark-2 text-white mt-3"
+          onclick="saveFile(document.getElementById('p2').textContent, 'p2')"
+          >save text for later</button>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <!-- image left-->
+      <div class='col-md-6 align-items-center justify-content-center d-flex'>
+        <div class="image-container"
+        style="width: 100%; max-width: 700px; display: flex; flex-direction: column; align-items: center;">
+        <img src='images/olympics.jpg'
+        id='i2'
+        class='img-fluid m-3 h-100 w-100'
+        style="max-width: 100%; max-height: 100%;">
+        <button class="btn bg-dark-2 text-white"
+        onclick="saveImage(document.getElementById('i2').src, 'i2')">save to file</button>
+        </div>
+      </div>
+      <!-- text right-->
+      <div class='col-md-6 text-white align-items-center d-flex p-4'>
+        <div class='d-flex flex-column align-items-center justify-content-center'>
+          <h2 class='fw-bold m-3 text-spacing primary-font'>The Dream</h2>
+          <p class='m-3' id="p3">Having a dream to swim in the Olympics is an aspiration that requires years of
+            dedication, hard work and discipline. As a swimmer, I have always been inspired
+            by the Olympic Games and the incredible feats of athleticism displayed by the
+            world's top swimmers. The opportunity to represent my country on the world stage
+            and compete against the best swimmers in the world is a dream that motivates me
+            to train harder every day. While the road to Olympic qualification is long and 
+            challenging, the satisfaction of achieving this goal and the memories that come
+            with it would be immeasurable.
+          </p>
+          <form>
+            <button class="btn bg-dark-2 text-white"
+            type="button"
+            onClick="increment(document.querySelector('#c3'))"
+            >Likes <span id="c3">0</span></button>
+          </form>
+          <button class = "btn bg-dark-2 text-white mt-3"
+          onclick="saveFile(document.getElementById('p3').textContent, 'p3')"
+          >save text for later</button>
+          <p class='m-3' id="p4">Pursuing an Olympic dream requires not only physical
+            training, but also mental strength, resilience, and an unwavering commitment to
+            excellence. As a swimmer with this dream, I am willing to put in the hard work
+            and dedication required to make it a reality.
+          </p>
+          <!-- save for later -->
+          <form>
+            <button class="btn bg-dark-2 text-white"
+            type="button"
+            onClick="increment(document.querySelector('#c4'))"
+            >Likes <span id="c4">0</span></button>
+          </form>
+          <button class = "btn bg-dark-2 text-white mt-3"
+          onclick="saveFile(document.getElementById('p4').textContent, 'p4')"
+          >save text for later</button>
+        </div>
+      </div>
+    </div>
+    <!-- TABLE Top 15 male Olympic swimming -->
+    <div class='table-responsive' id='table-men'>
+      <h2 class='fw-bold m-3 text-spacing primary-font text-white'>Top 15 Male Olympic Swimmers</h2>
+      <br>
+      <table class='table text-white'>
+      <thead>
+        <tr>
+        <th>Rank</th>
+        <th>Country</th>
+        <th>Swimmer</th>
+        <th>Gold</th>
+        <th>Silver</th>
+        <th>Bronze</th>
+        <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='fw-bold'>
+        <td>1</td>
+        <td>United States</td>
+        <td>Michael Phelps</td>
+        <td>23</td>
+        <td>3</td>
+        <td>2</td>
+        <td>28</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>United States</td>
+        <td>Mark Spitz</td>
+        <td>9</td>
+        <td>1</td>
+        <td>1</td>
+        <td>11</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>United States</td>
+        <td>Matt Biondi</td>
+        <td>8</td>
+        <td>2</td>
+        <td>1</td>
+        <td>11</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>United States</td>
+        <td>Caeleb Dressel</td>
+        <td>7</td>
+        <td>0</td>
+        <td>0</td>
+        <td>7</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>United States</td>
+        <td>Ryan Lochte</td>
+        <td>6</td>
+        <td>3</td>
+        <td>3</td>
+        <td>12</td>
+        </tr>
+        <tr>
+        <td>6</td>
+        <td>United States</td>
+        <td>Gary Hall, Jr.</td>
+        <td>5</td>
+        <td>3</td>
+        <td>2</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>7</td>
+        <td>Australia</td>
+        <td>Ian Thorpe</td>
+        <td>5</td>
+        <td>3</td>
+        <td>1</td>
+        <td>9</td>
+        </tr>
+        <tr>
+        <td>8</td>
+        <td>United States</td>
+        <td>Aaron Peirsol</td>
+        <td>5</td>
+        <td>2</td>
+        <td>0</td>
+        <td>7</td>
+        </tr>
+        <tr>
+        <td>9</td>
+        <td>United States</td>
+        <td>Nathan Adrian</td>
+        <td>5</td>
+        <td>1</td>
+        <td>2</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>10</td>
+        <td>United States</td>
+        <td>Tom Jager</td>
+        <td>5</td>
+        <td>1</td>
+        <td>1</td>
+        <td>7</td>
+        </tr>
+        <tr>
+        <td>11</td>
+        <td>United States</td>
+        <td>Don Schollander</td>
+        <td>5</td>
+        <td>1</td>
+        <td>0</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>12</td>
+        <td>United States</td>
+        <td>Johnny Weissmuller</td>
+        <td>5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>13</td>
+        <td>Russia</td>
+        <td>Alexander Popov</td>
+        <td>4</td>
+        <td>5</td>
+        <td>0</td>
+        <td>9</td>
+        </tr>
+        <tr>
+        <td>14</td>
+        <td>East Germany</td>
+        <td>Roland Matthes</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>15</td>
+        <td>United States</td>
+        <td>Jason Lezak</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>8</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <button class="btn bg-dark-2 text-white mt-4 mx-auto"
+      onclick="hideTable('table-men')">Hide men's table</button>
+      <button class="btn bg-dark-2 text-white mt-4 mx-auto"
+      onclick="showTable('table-men')">Show men's table</button>
+    </div>
+
+    <br>
+
+    <!-- TABLE Top 15 female Olympic swimming -->
+    <div class='table-responsive' id='table-women'>
+      <h2 class='fw-bold m-3 text-spacing primary-font text-white'>Top 15 Female Olympic Swimmers</h2>
+      <br>
+      <table class='table text-white'>
+      <thead>
+        <tr>
+        <th>Rank</th>
+        <th>Country</th>
+        <th>Swimmer</th>
+        <th>Gold</th>
+        <th>Silver</th>
+        <th>Bronze</th>
+        <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='fw-bold'>
+        <td>1</td>
+        <td>United States</td>
+        <td>Jenny Thompson</td>
+        <td>8</td>
+        <td>3</td>
+        <td>1</td>
+        <td>12</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>United States</td>
+        <td>Katie Ledecky</td>
+        <td>7</td>
+        <td>3</td>
+        <td>0</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>East Germany</td>
+        <td>Kristin Otto</td>
+        <td>6</td>
+        <td>0</td>
+        <td>0</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>United States</td>
+        <td>Amy Van Dyken</td>
+        <td>6</td>
+        <td>0</td>
+        <td>0</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>Australia</td>
+        <td>Emma McKeon</td>
+        <td>5</td>
+        <td>2</td>
+        <td>4</td>
+        <td>11</td>
+        </tr>
+        <tr>
+        <td>6</td>
+        <td>Hungary</td>
+        <td>Krisztina Egerszegi</td>
+        <td>5</td>
+        <td>1</td>
+        <td>1</td>
+        <td>7</td>
+        </tr>
+        <tr>
+        <td>7</td>
+        <td>United States</td>
+        <td>Dana Vollmer</td>
+        <td>5</td>
+        <td>1</td>
+        <td>1</td>
+        <td>7</td>
+        </tr>
+        <tr>
+        <td>8</td>
+        <td>United States</td>
+        <td>Missy Franklin</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>9</td>
+        <td>United States</td>
+        <td>Dara Torres</td>
+        <td>4</td>
+        <td>4</td>
+        <td>4</td>
+        <td>12</td>
+        </tr>
+        <tr>
+        <td>10</td>
+        <td>Australia</td>
+        <td>Dawn Fraser</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>11</td>
+        <td>East Germany</td>
+        <td>Kornelia Ender</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>12</td>
+        <td>United States</td>
+        <td>Allison Schmitt</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>10</td>
+        </tr>
+        <tr>
+        <td>13</td>
+        <td>Netherlands</td>
+        <td>Inge de Bruijn</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>14</td>
+        <td>Australia</td>
+        <td>Cate Campbell</td>
+        <td>4</td>
+        <td>1</td>
+        <td>1</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>15</td>
+        <td>Australia</td>
+        <td>Libby Trickett</td>
+        <td>4</td>
+        <td>1</td>
+        <td>2</td>
+        <td>7</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+    <div class="text-center">
+      <button class="btn bg-dark-2 text-white mt-4 mx-auto"
+      onclick="hideTable('table-women')">Hide women's table</button>
+      <button class="btn bg-dark-2 text-white mt-4 mx-auto"
+      onclick="showTable('table-women')">Show women's table</button>
+    </div>
+    <br>
+    <!-- footer-->
+    <div class="row d-flex justify-content-center bg-dark-2 footer">
+      <p class='my-3 text-white'> Find out more on swimming
+      <a href='https://olympics.com/'>at the Olympics website.</a>
+      <br>
+      </p>
+    </div>
+  <!-- jquery cdn -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- js -->
+  <script
+  src="js/script.js">
+  </script>
+
+  <!-- bootstrap jquery/js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" 
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" 
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+  crossorigin="anonymous"></script>
+</body>
+</html>
+
