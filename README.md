@@ -1,4 +1,5 @@
-# Capstone-Project-CP20 - Hobby Website
+# Capstone-Project-CP20
+#### Hobby Website
 
 ## Website Description
 Fully functional and Interactive website, describing a hobby of mine, where I discuss the benefits of Swimming, Dreams of the Olympics and some relevant Olympic Swmming information. Use case includes saving pictures and paragraphs to a saved for later page, for viewing at a later stage.
